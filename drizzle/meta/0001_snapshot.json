@@ -1,0 +1,389 @@
+{
+  "version": "5",
+  "dialect": "mysql",
+  "id": "cfbc02b3-42df-4ad8-947e-4970e021ea57",
+  "prevId": "c3941a14-bf02-4ac9-bfdf-3c54c50513fa",
+  "tables": {
+    "tbl_account": {
+      "name": "tbl_account",
+      "columns": {
+        "ac_id": {
+          "name": "ac_id",
+          "type": "int",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": true
+        },
+        "ac_cid": {
+          "name": "ac_cid",
+          "type": "varchar(13)",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false
+        },
+        "ac_password": {
+          "name": "ac_password",
+          "type": "varchar(255)",
+          "primaryKey": false,
+          "notNull": false,
+          "autoincrement": false
+        },
+        "ac_username": {
+          "name": "ac_username",
+          "type": "varchar(100)",
+          "primaryKey": false,
+          "notNull": false,
+          "autoincrement": false
+        },
+        "ac_hn": {
+          "name": "ac_hn",
+          "type": "varchar(20)",
+          "primaryKey": false,
+          "notNull": false,
+          "autoincrement": false
+        },
+        "ac_pname": {
+          "name": "ac_pname",
+          "type": "varchar(50)",
+          "primaryKey": false,
+          "notNull": false,
+          "autoincrement": false
+        },
+        "ac_fname": {
+          "name": "ac_fname",
+          "type": "varchar(150)",
+          "primaryKey": false,
+          "notNull": false,
+          "autoincrement": false
+        },
+        "ac_lname": {
+          "name": "ac_lname",
+          "type": "varchar(150)",
+          "primaryKey": false,
+          "notNull": false,
+          "autoincrement": false
+        },
+        "ac_pname_eng": {
+          "name": "ac_pname_eng",
+          "type": "varchar(50)",
+          "primaryKey": false,
+          "notNull": false,
+          "autoincrement": false
+        },
+        "ac_fname_eng": {
+          "name": "ac_fname_eng",
+          "type": "varchar(150)",
+          "primaryKey": false,
+          "notNull": false,
+          "autoincrement": false
+        },
+        "ac_lname_eng": {
+          "name": "ac_lname_eng",
+          "type": "varchar(150)",
+          "primaryKey": false,
+          "notNull": false,
+          "autoincrement": false
+        },
+        "ac_email": {
+          "name": "ac_email",
+          "type": "varchar(255)",
+          "primaryKey": false,
+          "notNull": false,
+          "autoincrement": false
+        },
+        "ac_phone_number": {
+          "name": "ac_phone_number",
+          "type": "varchar(20)",
+          "primaryKey": false,
+          "notNull": false,
+          "autoincrement": false
+        },
+        "ac_address": {
+          "name": "ac_address",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false,
+          "autoincrement": false
+        },
+        "ac_birthday": {
+          "name": "ac_birthday",
+          "type": "date",
+          "primaryKey": false,
+          "notNull": false,
+          "autoincrement": false
+        },
+        "dep_id": {
+          "name": "dep_id",
+          "type": "int",
+          "primaryKey": false,
+          "notNull": false,
+          "autoincrement": false
+        },
+        "ps_id": {
+          "name": "ps_id",
+          "type": "int",
+          "primaryKey": false,
+          "notNull": false,
+          "autoincrement": false
+        },
+        "ps_type_id": {
+          "name": "ps_type_id",
+          "type": "int",
+          "primaryKey": false,
+          "notNull": false,
+          "autoincrement": false
+        },
+        "ac_certificate_number": {
+          "name": "ac_certificate_number",
+          "type": "varchar(100)",
+          "primaryKey": false,
+          "notNull": false,
+          "autoincrement": false
+        },
+        "img_profile": {
+          "name": "img_profile",
+          "type": "varchar(500)",
+          "primaryKey": false,
+          "notNull": false,
+          "autoincrement": false
+        },
+        "rfid": {
+          "name": "rfid",
+          "type": "varchar(100)",
+          "primaryKey": false,
+          "notNull": false,
+          "autoincrement": false
+        },
+        "level": {
+          "name": "level",
+          "type": "int",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false,
+          "default": 1
+        },
+        "ac_active": {
+          "name": "ac_active",
+          "type": "tinyint",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false,
+          "default": 1
+        },
+        "ac_role": {
+          "name": "ac_role",
+          "type": "enum('admin','member','user')",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false,
+          "default": "'user'"
+        },
+        "createdAt": {
+          "name": "createdAt",
+          "type": "timestamp",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false,
+          "default": "(now())"
+        },
+        "updatedAt": {
+          "name": "updatedAt",
+          "type": "timestamp",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false,
+          "onUpdate": true,
+          "default": "(now())"
+        }
+      },
+      "indexes": {
+        "uq_account_cid": {
+          "name": "uq_account_cid",
+          "columns": [
+            "ac_cid"
+          ],
+          "isUnique": true
+        },
+        "uq_account_username": {
+          "name": "uq_account_username",
+          "columns": [
+            "ac_username"
+          ],
+          "isUnique": true
+        },
+        "idx_account_hn": {
+          "name": "idx_account_hn",
+          "columns": [
+            "ac_hn"
+          ],
+          "isUnique": false
+        },
+        "idx_account_department": {
+          "name": "idx_account_department",
+          "columns": [
+            "dep_id"
+          ],
+          "isUnique": false
+        },
+        "idx_account_position": {
+          "name": "idx_account_position",
+          "columns": [
+            "ps_id"
+          ],
+          "isUnique": false
+        },
+        "idx_account_active": {
+          "name": "idx_account_active",
+          "columns": [
+            "ac_active"
+          ],
+          "isUnique": false
+        },
+        "idx_account_role": {
+          "name": "idx_account_role",
+          "columns": [
+            "ac_role"
+          ],
+          "isUnique": false
+        }
+      },
+      "foreignKeys": {},
+      "compositePrimaryKeys": {
+        "tbl_account_ac_id": {
+          "name": "tbl_account_ac_id",
+          "columns": [
+            "ac_id"
+          ]
+        }
+      },
+      "uniqueConstraints": {},
+      "checkConstraint": {}
+    },
+    "tbl_position": {
+      "name": "tbl_position",
+      "columns": {
+        "ps_id": {
+          "name": "ps_id",
+          "type": "int",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": true
+        },
+        "ps_name": {
+          "name": "ps_name",
+          "type": "varchar(255)",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false
+        }
+      },
+      "indexes": {
+        "uq_tbl_position_ps_name": {
+          "name": "uq_tbl_position_ps_name",
+          "columns": [
+            "ps_name"
+          ],
+          "isUnique": true
+        }
+      },
+      "foreignKeys": {},
+      "compositePrimaryKeys": {
+        "tbl_position_ps_id": {
+          "name": "tbl_position_ps_id",
+          "columns": [
+            "ps_id"
+          ]
+        }
+      },
+      "uniqueConstraints": {},
+      "checkConstraint": {}
+    },
+    "tbl_department": {
+      "name": "tbl_department",
+      "columns": {
+        "dep_id": {
+          "name": "dep_id",
+          "type": "int",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": true
+        },
+        "dep_name": {
+          "name": "dep_name",
+          "type": "varchar(255)",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false
+        },
+        "dep_phone": {
+          "name": "dep_phone",
+          "type": "varchar(20)",
+          "primaryKey": false,
+          "notNull": false,
+          "autoincrement": false
+        }
+      },
+      "indexes": {
+        "uq_tbl_department_dep_name": {
+          "name": "uq_tbl_department_dep_name",
+          "columns": [
+            "dep_name"
+          ],
+          "isUnique": true
+        }
+      },
+      "foreignKeys": {},
+      "compositePrimaryKeys": {
+        "tbl_department_dep_id": {
+          "name": "tbl_department_dep_id",
+          "columns": [
+            "dep_id"
+          ]
+        }
+      },
+      "uniqueConstraints": {},
+      "checkConstraint": {}
+    },
+    "position_type": {
+      "name": "position_type",
+      "columns": {
+        "ps_type_id": {
+          "name": "ps_type_id",
+          "type": "int",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": true
+        },
+        "ps_name_type": {
+          "name": "ps_name_type",
+          "type": "varchar(255)",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false
+        }
+      },
+      "indexes": {},
+      "foreignKeys": {},
+      "compositePrimaryKeys": {
+        "position_type_ps_type_id": {
+          "name": "position_type_ps_type_id",
+          "columns": [
+            "ps_type_id"
+          ]
+        }
+      },
+      "uniqueConstraints": {},
+      "checkConstraint": {}
+    }
+  },
+  "views": {},
+  "_meta": {
+    "schemas": {},
+    "tables": {},
+    "columns": {}
+  },
+  "internal": {
+    "tables": {},
+    "indexes": {}
+  }
+}

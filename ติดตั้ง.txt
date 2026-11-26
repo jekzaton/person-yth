@@ -1,0 +1,14 @@
+npm install bcryptjs jose zod
+npm install -D @types/bcryptjs
+npm install lucide-react
+npm install react-hook-form zod @hookform/resolvers
+npm install xlsx exceljs
+
+# สร้าง key 48 หลัก
+openssl rand -base64 48
+
+
+npx drizzle-kit generate
+npx drizzle-kit generate --name=add_s_car_register
+npx drizzle-kit migrate
+echo $?

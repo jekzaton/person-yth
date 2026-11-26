@@ -1,0 +1,1 @@
+ALTER TABLE `tbl_account` ADD `ac_nickname` varchar(150);

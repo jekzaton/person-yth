@@ -1,0 +1,48 @@
+{
+  "version": "7",
+  "dialect": "mysql",
+  "entries": [
+    {
+      "idx": 0,
+      "version": "5",
+      "when": 1792479398488,
+      "tag": "0000_robust_luminals",
+      "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "5",
+      "when": 1792641622840,
+      "tag": "0001_add_position_type",
+      "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "5",
+      "when": 1792728893738,
+      "tag": "0002_add_account_nickname",
+      "breakpoints": true
+    },
+    {
+      "idx": 3,
+      "version": "5",
+      "when": 1793844435795,
+      "tag": "0003_add_car_brand",
+      "breakpoints": true
+    },
+    {
+      "idx": 4,
+      "version": "5",
+      "when": 1793933694199,
+      "tag": "0004_add_car_type",
+      "breakpoints": true
+    },
+    {
+      "idx": 5,
+      "version": "5",
+      "when": 1793945728391,
+      "tag": "0005_add_s_car_register",
+      "breakpoints": true
+    }
+  ]
+}
